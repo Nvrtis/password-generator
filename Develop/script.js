@@ -32,34 +32,34 @@ if (passwordLength >= 8 && passwordLength <= 128) {
     var criteriaUpperCase = confirm ("Please enter lower case letter", "ABCDEFGHIJKLMNOPQRSTUVWXYZ" )
   }
 
-  if (LowerCase === //string of lowercase letters
-    ) 
-    {var criteriaUpperCase = confirm ("Please press OK if you want to enter upper case letter in password" )}
+  // if (LowerCase === //string of lowercase letters
+  //   ) 
+  //   {var criteriaUpperCase = confirm ("Please press OK if you want to enter upper case letter in password" )}
 
-    if (criteriaUpperCase === true) {
-      var upperCase = prompt("Please enter your uppercase letters", "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
-  } 
-  else {
-    var criteriaNumeric = confirm ("Please enter numbers", "0123456789" )
-  }
+  //   if (criteriaUpperCase === true) {
+  //     var upperCase = prompt("Please enter your uppercase letters", "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+  // } 
+  // else {
+  //   var criteriaNumeric = confirm ("Please enter numbers", "0123456789" )
+  // }
 
-  if (upperCase === //string of uppercase letters
-    ) 
-    {var criteriaNumeric = confirm ("Please press OK if you want to enter numbers in password" )}
+  // if (upperCase === //string of uppercase letters
+  //   ) 
+  //   {var criteriaNumeric = confirm ("Please press OK if you want to enter numbers in password" )}
 
-    if (criteriaUpperCase === true) {
-      var upperCase = prompt("Please enter your numbers", "0123456789")
-  } 
-  else {
-    var criteriaSpecial = confirm ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?" ) )
-  }
+  //   if (criteriaUpperCase === true) {
+  //     var upperCase = prompt("Please enter your numbers", "0123456789")
+  // } 
+  // else {
+  //   var criteriaSpecial = confirm ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?" ) )
+  // }
 
-  if (upperCase === Number
-    ) 
-    {var criteriaSpecial = confirm ("Please press OK if you want to enter special signs in password" )}
+  // if (upperCase === Number
+  //   ) 
+  //   {var criteriaSpecial = confirm ("Please press OK if you want to enter special signs in password" )}
 
-    var criteriaSpecial = prompt ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?" )
-  } 
+  //   var criteriaSpecial = prompt ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?" )
+  // } 
   // else {
   //   var criteriaSpecial = confirm ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?") )
   // }
