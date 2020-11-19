@@ -1,3 +1,17 @@
+
+parseInt() added because i wanted the number to be integral
+
+while (passwordLength < 8 ||
+    passwordLength >128 ) {
+        passwordLength = parseInt(prompt("Please try again. \n Enter a number between 8 - 128", "8-128"))  
+    } added to make user input the correct number
+
+
+
+
+
+
+
 # 03 JavaScript: Password Generator
 
 ## Your Task

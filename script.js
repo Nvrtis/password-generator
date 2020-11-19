@@ -8,11 +8,11 @@ var criteriaLowerCase = confirm ("Please enter lower case letter", "abcdefghijkl
 
 
 
-var criteriaUpperCase
+var criteriaUpperCase = confirm ("Please enter lower case letter", "abcdefghijklmnopqrstuvwxyz" )
 
-var criteriaNumeric
+var criteriaNumeric = confirm ("Please enter numbers", "0123456789" )
 
-var criteriaSpecial
+var criteriaSpecial = confirm ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?" )
 
 
 // click a button and then are presented with a prompt, which as the user for length of passwordf (8-128 char)
