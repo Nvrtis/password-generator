@@ -7,6 +7,8 @@ while (passwordLength < 8 ||
     } added to make user input the correct number
 
 
+while loop idea got from the web
+
 
 
 
