@@ -25,11 +25,42 @@ while (passwordLength < 8 ||
 if (passwordLength >= 8 && passwordLength <= 128) {
   var criteriaLowerCase = confirm ("Please press OK if you want to enter lower case letter in password")}
 
-  if (criteriaLowerCase === true) {prompt("Please enter your lowercase letters", "abcdefghijklmnopqrstuvwxyz")
-
+  if (criteriaLowerCase === true) { 
+    var LowerCase = prompt("Please enter your lowercase letters", "abcdefghijklmnopqrstuvwxyz")
   } 
-  
-console.log (passwordLength + criteriaLowerCase)
-    
+  else {
+    var criteriaUpperCase = confirm ("Please enter lower case letter", "ABCDEFGHIJKLMNOPQRSTUVWXYZ" )
+  }
 
-}
+  if (LowerCase === //string of lowercase letters
+    ) 
+    {var criteriaUpperCase = confirm ("Please press OK if you want to enter upper case letter in password" )}
+
+    if (criteriaUpperCase === true) {
+      var upperCase = prompt("Please enter your uppercase letters", "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+  } 
+  else {
+    var criteriaNumeric = confirm ("Please enter numbers", "0123456789" )
+  }
+
+  if (upperCase === //string of uppercase letters
+    ) 
+    {var criteriaNumeric = confirm ("Please press OK if you want to enter numbers in password" )}
+
+    if (criteriaUpperCase === true) {
+      var upperCase = prompt("Please enter your numbers", "0123456789")
+  } 
+  else {
+    var criteriaSpecial = confirm ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?" ) )
+  }
+
+  if (upperCase === Number
+    ) 
+    {var criteriaSpecial = confirm ("Please press OK if you want to enter special signs in password" )}
+
+    var criteriaSpecial = prompt ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?" )
+  } 
+  // else {
+  //   var criteriaSpecial = confirm ("Please enter special signs", "~`!@#$%^&*()-_+={}[]|\\/:;\’/\"’<>,.?") )
+  // }
+
