@@ -26,19 +26,19 @@ if (includeLowerC=== false && includeUpperC=== false && includenumber=== false &
 
   // pushes the included criterias into the finalchars var
   if (includeLowerC===true) {
-    for (var i = 0;i < lowerCaseChar.length;++i)
+    for (var i = 0;i < lowerCaseChar.length;i++)
 finalchars.push (lowerCaseChar[i])
   }
   if (includeUpperC===true) {
-    for (var i = 0;i < upperCaseChar.length;++i)
+    for (var i = 0;i < upperCaseChar.length;i++)
     finalchars.push (upperCaseChar[i])
   }
   if (includenumber===true) {
-    for (var i = 0;i < numericNumber.length;++i)
+    for (var i = 0;i < numericNumber.length;i++)
 finalchars.push (numericNumber[i])
   }
   if (includesymbols===true) {
-    for (var i = 0;i < specialChar.length;++i)
+    for (var i = 0;i < specialChar.length;i++)
     finalchars.push (specialChar[i])
   }
 // avoids getting arrarys inside of arrays

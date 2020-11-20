@@ -1,6 +1,4 @@
-
 var charcount = parseInt(prompt("Please enter a number between 8 - 128", "8-128"))
-
 if(charcount >7 && charcount <= 128) {
 
   var finalchars=[]
@@ -9,11 +7,11 @@ if(charcount >7 && charcount <= 128) {
   var includesymbols = confirm('password should include symbols?')
 
   if (includenumber) {
-    for (var i = 0; numericNumber.length;++i)
+    for (var i = 0; numericNumber.length;i++)
 finalchars.push (numericNumber[i])
   }
   if (includenumber) {
-    for (var i = 0; numericNumber.length;++i)
+    for (var i = 0; numericNumber.length;i++)
     finalchars.push (specialChar[i])
   }
 
