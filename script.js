@@ -1,62 +1,124 @@
-var charcount = parseInt(prompt("Please enter a number between 8 - 128", "8-128"))
-if(charcount >7 && charcount <= 128) {
 
-  var finalchars=[]
+// Var list
+var lowerCaseChar = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-  var includenumber = confirm('password should include number?')
-  var includesymbols = confirm('password should include symbols?')
+var upperCaseChar = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
-  if (includenumber) {
-    for (var i = 0; numericNumber.length;i++)
-finalchars.push (numericNumber[i])
-  }
-  if (includenumber) {
-    for (var i = 0; numericNumber.length;i++)
-    finalchars.push (specialChar[i])
-  }
+var numericNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-  var flattenFinalChars = finalchars.flat()
-var password = ''
+var specialChar = ['#', '$', '%', '&', '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '['];
 
+var selectedNumber; 
 
-  for (var i = 0; charcount;++i) {
-    var randomIndex = math.floor (math.random() * flattenFinalChar.length)
-  }
-    var randomChar = flattenedFinalChars[randomIndex]
-
-    password += randomchar
+// password generator
+function getPwdLength() {
+ var charCount = parseInt(prompt("Please enter a number between 8 - 128", "8-128"));
+// limits users input on password length
+if (isNaN(charCount)===true){
+alert("Please input a number!")};
+if(charCount <= 7 || charCount > 128) {
+  charCount = parseInt(prompt("Please enter a number between 8 - 128", "8-128"));
 }
-// Criterias
+selectedNumber=charCount;};
 
-//   if (passwordLength < 8 ||
-//     passwordLength > 128) {
-//     passwordLength = parseInt(prompt("Please try again. \n Enter a number between 8 - 128", "8-128"))
-//   }
-// var criteriaLowerCase = confirm("Please press OK if you want to enter lower case letter in password")
+var finalArray=[]
 
-// var criteriaUpperCase = confirm("Please press OK if you want to enter upper case letter in password")
-  
-// var criteriaNumeric = confirm("Please press OK if you want to enter numbers in password")
+function getCharSelection() {
+  // pushes all var the users chooses, into 1 var
+  // Criterias
+  var includeLowerC = confirm ('Would you want lower case letter in your password?')
+  var includeUpperC = confirm ('Would you want upper case letter in your password?')
+  var includenumber = confirm('Would you want numbers in your password?')
+  var includesymbols = confirm('Would you want symbols in your password?')
+// need to include one criteria
+if (includeLowerC=== false && includeUpperC=== false && includenumber=== false && includesymbols === false) {
+  alert('You need to pick atleast one criteria \n Please try again')
+ return;}
 
-// var criteriaSpecial = confirm("Please press OK if you want to enter special signs in password")}
+ var finalChars={
+   includeLowerC:includeLowerC,
+   includeUpperC:includeUpperC,
+   includenumber:includenumber,
+   includesymbols:includesymbols
+ };
+ 
+return finalChars;
+}
 
-// if (criteriaLowerCase, criteriaUpperCase, criteriaNumeric,criteriaSpecial===false) {alert ("Your password needs one criteria")}
+function randomPicker(array) {
+  var picker=Math.floor(Math.random()*array.length);
+  var randomChar= array[picker];
+  console.log(randomChar)
+  return randomChar;
+}
 
-// passwordLength
+function getCharArray(finalChars) {
+  var allTheArrays = []
+  // pick the variable types
+  // array 
+  // if statments: includesymbols
+  // // pushes the included criterias into the finalchars var
+  if (finalChars.includeLowerC===true) {
+    for (var i = 0;i < lowerCaseChar.length;i++)
+  allTheArrays.push (lowerCaseChar[i])
+  }
+  if (finalChars.includeUpperC===true) {
+    for (var i = 0;i < upperCaseChar.length;i++)
+    allTheArrays.push (upperCaseChar[i])
+  }
+  if (finalChars.includenumber===true) {
+    for (var i = 0;i < numericNumber.length;i++)
+    allTheArrays.push (numericNumber[i])
+  }
+  if (finalChars.includesymbols===true) {
+    for (var i = 0;i < specialChar.length;i++)
+    allTheArrays.push (specialChar[i])
+  }
+  console.log(allTheArrays)
+  finalArray=allTheArrays;
 
-// for(var i = 8, i < function().passwordLength ; i++ )
-  // if (criteriaLowerCase===true)
+}
+// console.log(getCharArray(getCharSelection()))
 
+function getPassword (charCount) {
+  console.log(finalArray)
+var finalpwd = ""
+  for(var i = 0;i < charCount;i++){
+    finalpwd += randomPicker (finalArray)
+    
+  }
+  console.log(finalpwd)
+  return finalpwd;
+}
 
-// click a button and then are presented with a prompt, which as the user for length of passwordf (8-128 char)
-// after entering the number, the user will get a confirm to ask the user wants to have lowercase characters in password.
-  // if user clicks ok then user will recieve lowercase letters in password (atleast 1)
-// after the user either accept or cancel lowercase character, the user will recieve a new confirm, where it ask the user wants to add any uppercase characters in the password
-  //if user clicks ok then user will recieve uppercase letters in password (atleast 1)
-//after the user confirms or cancel the confirm () the user will recieve a new confirm if the user wants to have numeric (numbers) in the password
-  //if user press ok then user gets some numbers in password
-//after the user confirms or cancel the confirm () the user will recieve a new confirm if the user wants to have special characters in the password
-  // if user pressed ok then user will getsome special character in their password
-  // if user have not pressed ok on any prompts, the password will not be generated, and a alert will show up and inform the user 
-// the prompts will have to validate the results, choose atleast two character from each criteria or more to add in the generated password
-// password is then shown as a alert or written as a text on the html document 
+console.log(getPassword(selectedNumber))
+
+// f
+// avoids getting arrarys inside of arrays
+  // var flattenFinalChars = finalchars.flat()
+// getting password to become as string
+  // var finalpassword = ''
+// getting random number if the chosen criterias
+  // for (var i = 0; charcount;++i) {
+  //   var randomIndex = Math.floor(Math.random() * flattenFinalChars.length)
+  // }
+  //   var randomChar = flattenedFinalChars[randomIndex]
+
+  //   finalpassword += randomChar
+  //   alert (finalpassword)
+
+// Assignment Code
+var generateBtn = document.querySelector("#generate");
+
+// Write password to the #password input
+function writePassword() {
+  getPwdLength()
+  // getCharSelection() 
+  getCharArray(getCharSelection())
+  var password = getPassword(selectedNumber);
+  var passwordText = document.querySelector("#password");
+  passwordText.innerText = password;
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
