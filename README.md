@@ -28,6 +28,7 @@ The reasoning behind having several functions instead of one function was to be 
 
 The function GetPwdLength was used to get the users input into a variable that could be used latter on in the code. 
 I needed certain criterias to be sure that the user entered in a valid length which was between 8-128 characters and that the user entered in a number, which is done by if statments
+the functions end by taking the variable charCount and becoming SelectedNumber which is in the global window.
 
 ![criterias](./Assets/criterias.png)
 
@@ -37,94 +38,18 @@ The variable finalChars is used to store the information where i could access it
 
 ![criterias](./Assets/array.png)
 
-The next function will be the getCharArray with the input of finalChars from the previous function to either confirm if the criterias will be pused into the allTheArrays variable. If the user pressed ok on the criteria includesymbols, then a for loop which will push all the special symbols that is in the specialChar array into the allTheArrays.
+The next function will be the getCharArray with the input of finalChars from the previous function to either confirm if the criterias will be pused into the allTheArrays variable. If the user pressed ok on the criteria includesymbols, then a for loop which will push all the special symbols that is in the specialChar array into the allTheArrays. The function will end with allTheArrays becoming the variable finalArray that is in the global window.
 
+![randomiser](./Assets/randomiser.png)
 
+The randomPicker function choses at random a character that the user accepted, and is added into finalarray.
 
+![Gets password](./Assets/pwd.png)
 
-## Your Task
+The final function is where we put the input we recieved earlier together. the User chose the length with selectedNumber and randomPicker randomises the code. The finalpwd is everything put together in a string form.
 
-This week’s homework requires you to modify starter code to create an application that enables employees to generate random passwords based on criteria that they’ve selected. This app will run in the browser and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished, responsive user interface that adapts to multiple screen sizes.
+## Conclussion
+I learned alot during this assignment, and even though i managed to make a password generator i am still missing one of the acceptance criteria, I could not find out a way to make sure my final password included atleast one character from each criteria. I did attempt to create som if statements and/or see if i could use the .inculded() property.
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of password special characters](https://www.owasp.org/index.php/Password_special_characters) from the OWASP Foundation.
+Also i could have managed to make this password generator with the use of concat() method, instead have my complicated array function. The reason i did not use it was because i learned of it a bit to late, and i had managed that part of the code working.
 
-## User Story
-
-```
-AS AN employee with access to sensitive data
-I WANT to randomly generate a password that meets certain criteria
-SO THAT I can create a strong password that provides greater security
-```
-
-## Acceptance Criteria
-
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
-
-
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

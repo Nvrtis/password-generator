@@ -46,9 +46,9 @@ function getCharSelection() {
   return finalChars;
 }
 // randomiser
-function randomPicker(array) {
-  var picker = Math.floor(Math.random() * array.length);
-  var randomChar = array[picker];
+function randomPicker() {
+  var picker = Math.floor(Math.random() * finalArray.length);
+  var randomChar = finalArray[picker];
   return randomChar;
 }
 // Generating final array with all the criterias
@@ -70,15 +70,13 @@ function getCharArray(finalChars) {
     for (var i = 0; i < specialChar.length; i++)
       allTheArrays.push(specialChar[i])
   }
-  console.log(allTheArrays)
   finalArray = allTheArrays;
 }
 
 // Gets password from array
-function getPassword(charCount) {
-  console.log(finalArray)
+function getPassword() {
   var finalpwd = ""
-  for (var i = 0; i < charCount; i++) {
+  for (var i = 0; i < selectedNumber; i++) {
     finalpwd += randomPicker(finalArray)
   }
   return finalpwd;
@@ -91,7 +89,7 @@ var generateBtn = document.querySelector("#generate");
 function writePassword() {
   getPwdLength()
   getCharArray(getCharSelection())
-  var password = getPassword(selectedNumber);
+  var password = getPassword();
   var passwordText = document.querySelector("#password");
   passwordText.innerText = password;
 }
